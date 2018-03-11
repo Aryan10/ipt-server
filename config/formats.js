@@ -320,7 +320,7 @@ exports.Formats = [
 			'Charizardite Y', 'Diancite', 'Gardevoirite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Metagrossite', 'Salamencite', 'Swampertite',
 		],
 	},
-/*	{
+  {
 		name: "[Gen 7] VGC 2017",
 		desc: [
 			"&bullet; <a href=\"http://www.smogon.com/forums/threads/3583926/\">VGC 2017 Discussion</a>",
@@ -339,7 +339,7 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'Species Clause', 'Nickname Clause', 'Item Clause', 'Team Preview', 'Cancel Mod', 'Alola Pokedex'],
 		banlist: ['Illegal', 'Unreleased', 'Solgaleo', 'Lunala', 'Necrozma', 'Magearna', 'Marshadow', 'Zygarde', 'Mega'],
 		requirePlus: true,
-	}, */
+	},
 	{
 		name: "[Gen 7] Battle Spot Doubles",
 		desc: [
@@ -419,6 +419,29 @@ return tierShift;
 },
 },
 	{
+		name: "[Gen 7] Nature Swap",
+		desc: [
+			`Pok&eacute;mon have their base stats swapped depending on their nature.`,
+			`&bullet; <a href="http://www.smogon.com/forums/threads/3612727/">Nature Swap</a>`,
+		],
+
+		mod: 'natureswap',
+		ruleset: ['[Gen 7] OU'],
+		banlist: ['Blissey', 'Chansey', 'Cloyster', 'Hoopa-Unbound', 'Kyurem-Black', 'Stakataka'],
+	},
+	{
+		name: "[Gen 7] Nature Swap Random",
+		desc: [
+			`Pok&eacute;mon have their base stats swapped depending on their nature.`,
+			`&bullet; <a href="http://www.smogon.com/forums/threads/3612727/">Nature Swap</a>`,
+		],
+team: 'random',
+searchShow:false,
+		mod: 'natureswap',
+		ruleset: ['[Gen 7] OU'],
+		banlist: ['Blissey', 'Chansey', 'Cloyster', 'Hoopa-Unbound', 'Kyurem-Black', 'Stakataka'],
+	},
+	{
 		section: "Other Metagames",
 		column: 2,
 	},
@@ -457,6 +480,23 @@ return tierShift;
 			'Power Construct', 'Perish Song', 'Focus Sash', 'Kangaskhanite', 'Salamencite', 'Chansey + Charm + Seismic Toss', 'Chansey + Charm + Psywave',
 			'Flash', 'Kinesis', 'Leaf Tornado', 'Mirror Shot', 'Mud Bomb', 'Mud-Slap', 'Muddy Water', 'Night Daze', 'Octazooka', 'Sand Attack', 'Smokescreen',
 		],
+	},
+	{
+		name: "[Gen 7] 2v2 Doubles",
+		desc: [
+			`Double battle where you bring four Pok&eacute;mon to Team Preview and choose only two.`,
+			`&bullet; <a href="http://www.smogon.com/forums/threads/3606989/">2v2 Doubles</a>`,
+		],
+
+		mod: 'gen7',
+		gameType: 'doubles',
+		searchShow: false,
+		teamLength: {
+			validate: [2, 4],
+			battle: 2,
+		},
+		ruleset: ['Gen 7] Doubles OU'],
+		banlist: ['Salamence-Mega', 'Tapu Lele', 'Focus Sash', 'Perish Song'],
 	},
 	{
 		name: "[Gen 7] Mix and Mega",
@@ -659,6 +699,23 @@ return tierShift;
 		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod', 'Team Preview'],
 	},
 	{
+		name: "[Gen 7] 2v2 Doubles Random",
+		desc: [
+			`Double battle where you bring four Pok&eacute;mon to Team Preview and choose only two.`,
+			`&bullet; <a href="http://www.smogon.com/forums/threads/3606989/">2v2 Doubles</a>`,
+		],
+team: 'random',
+		mod: 'gen7',
+		gameType: 'doubles',
+		// searchShow: false,
+		teamLength: {
+			validate: [2, 4],
+			battle: 2,
+		},
+		ruleset: ['Gen 7] Doubles OU'],
+		banlist: ['Salamence-Mega', 'Tapu Lele', 'Focus Sash', 'Perish Song'],
+	},
+	{
 		name: "[Gen 7] Monotype Random Battle",
 
 		mod: 'gen7',
@@ -718,7 +775,7 @@ return tierShift;
 
 	},
 
-{
+/*{
   name: "[Gen 7] Alola Random",
   desc: ["Random of Alola regional dex Pokémon."],
 
@@ -750,7 +807,8 @@ return tierShift;
   team: 'random',
   ruleset: ['PotD', 'Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod', 'LC'],
   banlist: []
-},
+},*/
+	
 
 
 	// RoA Spotlight
