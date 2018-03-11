@@ -438,8 +438,8 @@ return tierShift;
 team: 'random',
 searchShow:false,
 		mod: 'natureswap',
-		ruleset: ['[Gen 7] OU'],
-		banlist: ['Blissey', 'Chansey', 'Cloyster', 'Hoopa-Unbound', 'Kyurem-Black', 'Stakataka'],
+		ruleset: ['PotD', 'Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
+	//	banlist: ['Blissey', 'Chansey', 'Cloyster', 'Hoopa-Unbound', 'Kyurem-Black', 'Stakataka'],
 	},
 	{
 		section: "Other Metagames",
@@ -621,7 +621,7 @@ searchShow:false,
 			return Object.assign({addedType: pokemon.hpType}, template);
 		},
 	},
-	{
+	/*{
 		name: "[Gen 7] 2v2 Doubles",
 		desc: [
 			"Double battle where you bring four Pok&eacute;mon to Team Preview and choose only two.",
@@ -637,7 +637,7 @@ searchShow:false,
 		},
 		ruleset: ['Gen 7] Doubles OU'],
 		banlist: ['Tapu Lele', 'Focus Sash', 'Perish Song'],
-	},
+	}, */
 	{
 		name: "[Gen 6] Gen-NEXT OU",
 
@@ -707,13 +707,13 @@ searchShow:false,
 team: 'random',
 		mod: 'gen7',
 		gameType: 'doubles',
-		// searchShow: false,
+		searchShow: false,
 		teamLength: {
-			validate: [2, 4],
+		//	validate: [2, 4],
 			battle: 2,
 		},
-		ruleset: ['Gen 7] Doubles OU'],
-		banlist: ['Salamence-Mega', 'Tapu Lele', 'Focus Sash', 'Perish Song'],
+		ruleset: ['PotD', 'Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
+	//	banlist: ['Salamence-Mega', 'Tapu Lele', 'Focus Sash', 'Perish Song'],
 	},
 	{
 		name: "[Gen 7] Monotype Random Battle",
@@ -757,7 +757,7 @@ team: 'random',
 
 		team: 'random',
 
-		ruleset: ['[Gen 7] Random (no PotD)'],
+		ruleset: ['PotD', 'Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
 
 		onNegateImmunity: false,
 
